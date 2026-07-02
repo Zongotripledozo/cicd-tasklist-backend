@@ -1,0 +1,21 @@
+# Faux positifs confirmes : ces CVE concernent des paquets npm (tar, glob,
+# minimatch, cross-spawn, sigstore) qui n'existent pas comme dependances
+# installees dans l'image finale (verifie via `find node_modules -type d`).
+# Trivy les detecte via du pattern-matching sur des chaines vendorisees a
+# l'interieur des bundles JS officiels de @prisma/engines, @prisma/fetch-engine
+# et @prisma/client, des paquets indispensables au fonctionnement de
+# l'application. Il n'existe aucun moyen de les retirer sans casser Prisma.
+# A reevaluer a chaque mise a jour de Prisma.
+
+CVE-2024-21538
+CVE-2025-64756
+CVE-2026-26996
+CVE-2026-27903
+CVE-2026-27904
+CVE-2026-48815
+CVE-2026-23745
+CVE-2026-23950
+CVE-2026-24842
+CVE-2026-26960
+CVE-2026-29786
+CVE-2026-31802

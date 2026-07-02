@@ -19,8 +19,10 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+RUN apk update && apk upgrade --no-cache
+
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev && rm -rf node_modules/prisma
 
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/prisma ./prisma
