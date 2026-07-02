@@ -1,0 +1,120 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "cicd-tasklist-backend",
+  "documentNamespace": "https://spdx.org/spdxdocs/cicd-tasklist-backend-2026-07-02",
+  "creationInfo": {
+    "created": "2026-07-02T00:00:00Z",
+    "creators": ["Tool: Trivy"]
+  },
+  "packages": [
+    {
+      "name": "cicd-tasklist-backend",
+      "SPDXID": "SPDXRef-Package-Root",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "@prisma/client",
+      "SPDXID": "SPDXRef-Package-PrismaClient",
+      "versionInfo": "6.9.0",
+      "downloadLocation": "https://www.npmjs.com/package/@prisma/client",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "cors",
+      "SPDXID": "SPDXRef-Package-Cors",
+      "versionInfo": "2.8.5",
+      "downloadLocation": "https://www.npmjs.com/package/cors",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "dotenv",
+      "SPDXID": "SPDXRef-Package-Dotenv",
+      "versionInfo": "16.5.0",
+      "downloadLocation": "https://www.npmjs.com/package/dotenv",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "express",
+      "SPDXID": "SPDXRef-Package-Express",
+      "versionInfo": "5.1.0",
+      "downloadLocation": "https://www.npmjs.com/package/express",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "prisma",
+      "SPDXID": "SPDXRef-Package-Prisma",
+      "versionInfo": "6.9.0",
+      "downloadLocation": "https://www.npmjs.com/package/prisma",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "supertest",
+      "SPDXID": "SPDXRef-Package-Supertest",
+      "versionInfo": "7.1.0",
+      "downloadLocation": "https://www.npmjs.com/package/supertest",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "tsx",
+      "SPDXID": "SPDXRef-Package-Tsx",
+      "versionInfo": "4.19.0",
+      "downloadLocation": "https://www.npmjs.com/package/tsx",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-Package-TypeScript",
+      "versionInfo": "5.8.0",
+      "downloadLocation": "https://www.npmjs.com/package/typescript",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "vitest",
+      "SPDXID": "SPDXRef-Package-Vitest",
+      "versionInfo": "3.2.1",
+      "downloadLocation": "https://www.npmjs.com/package/vitest",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-Root"
+    }
+  ]
+}
