@@ -85,13 +85,13 @@ pipeline {
 
         stage('Trivy Scan') {
             steps {
-                sh 'trivy image --severity HIGH,CRITICAL --exit-code 1 "$LOCAL_IMAGE_NAME"'
+                sh 'trivy image --timeout 20m --severity HIGH,CRITICAL --exit-code 1 "$LOCAL_IMAGE_NAME"'
             }
         }
 
         stage('Generate SBOM') {
             steps {
-                sh 'trivy image --format spdx-json -o sbom-spdx.json "$LOCAL_IMAGE_NAME"'
+                sh 'trivy image --timeout 20m --format spdx-json -o sbom-spdx.json "$LOCAL_IMAGE_NAME"'
             }
         }
 
