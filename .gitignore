@@ -75,6 +75,8 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
+.env
+.env.docker
 .env.development.local
 .env.test.local
 .env.production.local
@@ -124,9 +126,8 @@ dist
 .DS_Store
 
 # Prisma
-# Uncomment the line below if you don't want to commit your SQLite database file
-# *.db
-# *.db-journal
+*.db
+*.db-journal
 
 # Build folder
 dist/

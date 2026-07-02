@@ -28,7 +28,7 @@ services:
     ports:
       - "3001:3001"
     restart: unless-stopped
-    command: sh -c "npx prisma db push --accept-data-loss && node dist/server.js"
+    command: sh -c "npx prisma db push --accept-data-loss --skip-generate && node dist/server.js"
     networks:
       - backend_net
 

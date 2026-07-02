@@ -35,6 +35,12 @@ pipeline {
             steps {
                 sh 'npm run test:coverage'
             }
+
+            post {
+                always {
+                    junit 'reports/junit.xml'
+                }
+            }
         }
 
         stage('E2E Tests') {
@@ -55,7 +61,7 @@ pipeline {
                     withSonarQubeEnv('sonarqube-local') {
                         sh '''
                             npx sonar-scanner \
-                                -Dsonar.login=$SONAR_TOKEN \
+                                -Dsonar.token=$SONAR_TOKEN \
                                 -Dsonar.host.url=$SONAR_HOST_URL
                         '''
                     }
@@ -105,6 +111,7 @@ pipeline {
 
     post {
         always {
+            archiveArtifacts artifacts: 'sbom-spdx.json', allowEmptyArchive: true, fingerprint: true
             cleanWs()
         }
     }
