@@ -57,6 +57,30 @@ L’image Docker est multi-stage :
 
 Le fichier `.dockerignore` réduit le contexte d’image pour éviter d’envoyer les artefacts, les tests et les secrets locaux.
 
+## Lancer en local avec Docker
+
+Le projet inclut un `docker-compose.yml` avec deux services :
+
+- `mysql` (MySQL 8) avec volume nommé pour persister les donnees
+- `backend` (build depuis le `Dockerfile`) qui attend que MySQL soit sain avant de demarrer
+
+Le backend applique le schema Prisma au demarrage (`npx prisma db push --accept-data-loss`) puis lance l'API.
+
+Demarrage local :
+
+```bash
+docker compose up -d --build
+```
+
+Verification rapide :
+
+```bash
+docker compose ps
+curl http://localhost:3001/api/tasks
+```
+
+Si tout est correct, l'appel `GET /api/tasks` renvoie un JSON (souvent `[]` au premier demarrage).
+
 ## Stratégie de tests
 
 - Les tests unitaires valident les services et les contrôleurs isolément avec des mocks Prisma et des mocks de service.
